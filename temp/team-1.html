@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>sysbio</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: sysbio - v4.7.0
+    * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+
+    <link
+            type="text/css"
+            rel="stylesheet"
+            href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
+    />
+    <!-- Required scripts -->
+    <script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+            <h1><a href="index.html">sysbio.<span style="color: #6c63ff">ua</span></a></h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+                <li><a class="nav-link scrollto" href="research.html">Research</a></li>
+                <li><a class="nav-link scrollto" href="publications.html">Publications</a></li>
+                <li class="dropdown"><a href="tools.html"><span>Tools</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="software.html">Software</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto active" href="team.html">Team</a></li>
+                <li><a class="nav-link scrollto" href="opportunities.html">Opportunities</a></li>
+                <li><a class="nav-link scrollto" href="contacts.html">Contacts</a></li>
+                <li><a class="getstarted scrollto" href="opportunities.html">Support us</a></li>
+                <li>
+                    <a class="nav-link" href="opportunities.html"><span style="color: #6c63ff"> EN  </span> | UA </a>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+    </div>
+</header><!-- End Header -->
+
+<main id="main">
+
+    <!-- ======= Team Section ======= -->
+    <section id="staff" class="team section-bg mt-5">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Staff</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-2 col-md-4 d-flex align-items-stretch mx-auto" v-for="person in staff">
+                    <div class="member" data-aos="fade-up" data-aos-delay="3">
+                        <div class="member-img">
+                            <!--                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">-->
+                            <img :src="person.photo" class="img-fluid " alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter">{{person.twitter}}</i></a>
+                                <a :href="'mailto:'+person.email"><i class="bi bi-google"></i></a>
+                                <a href=""><i class="bi bi-linkedin">{{person.linkedin}}</i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>{{person.name}} {{person.surname}}</h4>
+                            <span>{{person.position}}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Team Section -->
+    <section id="phd" class="team section-bg mt-0 pt-0">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>PhD students</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-2 col-md-4 d-flex align-items-stretch mx-auto" v-for="person in phd">
+                    <div class="member" data-aos="fade-up" data-aos-delay="3">
+                        <div class="member-img">
+                            <!--                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">-->
+                            <img :src="person.photo" class="img-fluid " alt="">
+                            <div class="social">
+                                <a href=""><i class="bi bi-twitter">{{person.twitter}}</i></a>
+                                <a :href="'mailto:'+person.email"><i class="bi bi-google"></i></a>
+                                <a href=""><i class="bi bi-linkedin">{{person.linkedin}}</i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>{{person.name}} {{person.surname}}</h4>
+                            <span>{{person.position}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Team Section -->
+    <section id="bsc" class="team section-bg">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <h2>Bachelor’s and Mater’s Students</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-2 col-md-4 d-flex align-items-stretch mx-auto" v-for="person in bsc">
+                    <div class="member" data-aos="fade-up" data-aos-delay="3">
+                        <div class="member-img">
+                            <!--                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">-->
+                            <img :src="person.photo" class="img-fluid " alt="">
+                            <div class="social">
+                                <a href=""><img src="assets/img/icons8-google-scholar-24.png"></img></a>
+                                <a href=""><i class="bi bi-twitter">{{person.twitter}}</i></a>
+                                <a :href="'mailto:'+person.email"><i class="bi bi-google"></i></a>
+                                <a href=""><i class="bi bi-linkedin">{{person.linkedin}}</i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>{{person.name}} {{person.surname}}</h4>
+                            <span>{{person.position}}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </section><!-- End Team Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Alumnies</h2>
+            </div>
+            <div class="row faq-item d-flex align-items-stretch mx-auto " data-aos="fade-up" data-aos-delay="1"
+                 v-for="person in alumnies">
+                <div class="col-lg-2">
+                    <!--                    <i class="ri-question-line"></i>-->
+                    {{person.graduation_year}}
+                </div>
+                <div class="col-lg-3">
+                    {{person.name}} {{person.surname}}
+                </div>
+                <div class="col-lg-7">
+                    <p>
+                        {{person.description}}
+                    </p>
+                </div>
+            </div><!-- End F.A.Q Item-->
+
+        </div>
+    </section>
+    <!-- ======= Contact Section ======= -->
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <!--    <section id="contact" class="contact">-->
+    <div class="container">
+        <div class="row contact d-flex align-items-center ">
+
+            <div class="col-lg-6 col-md-6  col-lg-offset-10 col-md-offset-10 text-lg-left ">
+                <div class="contact-about">
+                    <h3>sysbio.<span class="accent">ua</span></h3>
+                    <p>We are team of talented scientists making bio research</p>
+                    <div class="social-links">
+                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="google"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 mt-md-0 text-lg-left">
+                <div class="info">
+                    <div class="pb-1">
+                        <h5> System Biology Group</h5>
+                        <!--                        <h6>System Biology Group</h6>-->
+                    </div>
+                    <div>
+                        <i class="ri-map-pin-line"></i>
+                        <p>
+                            <a href="http://imbg.org.ua/uk/dept/enzymology/lab_sysbiol/">Institute of Molecular Biology
+                                and Genetics</a>,
+                            </br> 150, Academician Zabolotny street,<br/> Kyiv, Ukraine, 03680</p>
+                    </div>
+
+                    <div>
+                        <i class="ri-mail-send-line"></i>
+                        <p>admin@sysbio.org.ua</p>
+                    </div>
+
+                    <div>
+                        <i class="ri-phone-line"></i>
+                        <p> +38 (044) 526-11-69</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="footer pb-0 mb-0">
+        <div class="container">
+
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6 col-md-6 text-lg-left">
+                    <div class="copyright">
+                        &copy; Copyright <strong>sysbio</strong>. All Rights Reserved
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</footer><!-- End Footer --><!-- End Footer -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+<script type="module">
+
+    window.app = new Vue({
+        el: '#main',
+        data: {
+
+            "staff": [
+                {
+                    "name": "Maria",
+                    "surname": "Obolenska",
+                    "position": "Professor, Dr. Sci., Lab Head",
+                    "photo": "assets/img/team/team-1.jpg",
+                    "twitter": "",
+                    "email": "m.obolenska@gmail.com",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "computational and molecular biology"
+
+                },
+
+                {
+                    "name": "Olga",
+                    "surname": "Martsenyuk",
+                    "position": "PhD, Scientific Researcher",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "o.p.martsenyuk@imbg.org.ua",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "experimental molecular biology"
+                },
+
+                {
+                    "name": "Ruslan",
+                    "surname": "Rodriguez",
+                    "position": "Junior Scientific Researcher",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "m.obolenska@gmail.com",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "proteomics, metabolic pathways modelling"
+                },
+                {
+                    "name": "Alina",
+                    "surname": "Frolova",
+                    "position": "Junior Scientific Researcher",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "a.o.frolova@imbg.org.ua",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "computational biology and bioinformatics"
+
+                },
+                {
+                    "name": "Maria",
+                    "surname": "Chabanova",
+                    "position": "Technician",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "lab equipment"
+
+                }
+            ],
+            "phd": [
+                {
+                    "name": "Olexandr",
+                    "surname": "Lykhenko",
+                    "position": "MSc",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "lykhenko.olexandr@gmail.com",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "applied math and bioinformatics"
+                },
+
+                {
+                    "name": "Serhiy",
+                    "surname": "Ralchenko",
+                    "position": "MSc",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "ralchenkos@gmail.com",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "experimental molecular biology"
+                }
+            ],
+            "bsc": [
+                {
+                    "name": "Stanislav",
+                    "surname": "Zubenko",
+                    "position": "UnderGrad",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "dantistnfs@gmail.com",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "molecular biology, data-mining"
+                },
+
+                {
+                    "name": "Vladyslav",
+                    "surname": "Bondarenko",
+                    "position": "BSc",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "vladyslav.bon@gmail.com",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "computational biology and bioinformatics"
+                }
+            ],
+            "alumnies": [
+                {
+                    "name": "Name",
+                    "surname": "Surname",
+                    "position": "UnderGrad",
+                    "photo": "assets/img/team/team-3.jpg",
+                    "twitter": "",
+                    "email": "dantistnfs@gmail.com",
+                    "linkedin": "",
+                    "google_scholar": "",
+                    "profile": "molecular biology, data-mining",
+                    "graduation_year": 2020,
+                    "description": "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non\n" +
+                        "                        curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non."
+                }
+            ],
+
+
+        }
+    })
+</script>
+
+</html>
