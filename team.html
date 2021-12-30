@@ -103,9 +103,7 @@
                             <div class="social">
                                 <a :href="person.google_scholar"><img
                                         src="assets/img/icons8-google-scholar-24.png"></a>
-                                <a :href="person.twitter"><i class="bi bi-twitter"></i></a>
-                                <a :href="'mailto:'+person.email"><i class="bi bi-google"></i></a>
-                                <a :href="person.linkedin"><i class="bi bi-linkedin"></i></a>
+                                <a :href="'mailto:'+person.email"><i class="bi bi-envelope"></i></a>
                             </div>
                         </div>
                         <div class="member-info">
@@ -123,21 +121,19 @@
         <div class="container">
 
             <div class="section-title" data-aos="fade-up">
-                <h2>PhD students</h2>
+                <h2>Students</h2>
                 <p>Future scientists who are developing in various fields of biology</p>
             </div>
 
             <div class="row">
-                <div class="col-lg-2 col-md-4 d-flex align-items-stretch mx-auto" v-for="person in phd">
+                <div class="col-lg-2 col-md-4 d-flex align-items-stretch mx-auto" v-for="person in stu">
                     <div class="member" data-aos="fade-up" data-aos-delay="3">
                         <div class="member-img">
                             <img :src="person.photo" class="img-fluid " alt="">
                             <div class="social">
                                 <a :href="person.google_scholar"><img
-                                        src="assets/img/icons8-google-scholar-24.png"></img></a>
-                                <a :href="person.twitter"><i class="bi bi-twitter"></i></a>
-                                <a :href="'mailto:'+person.email"><i class="bi bi-google"></i></a>
-                                <a :href="person.linkedin"><i class="bi bi-linkedin"></i></a>
+                                        src="assets/img/icons8-google-scholar-24.png"></a>
+                                <a :href="'mailto:'+person.email"><i class="bi bi-envelope"></i></a>
                             </div>
                         </div>
                         <div class="member-info">
@@ -149,45 +145,13 @@
             </div>
         </div>
     </section><!-- End Team Section -->
-    <section id="bsc" class="team section-bg">
-        <div class="container">
-
-            <div class="section-title" data-aos="fade-up">
-                <h2>Bachelor’s and Mater’s Students</h2>
-                <p>Students who are in a laboratory group as part of internships or master's projects</p>
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-2 col-md-4 d-flex align-items-stretch mx-auto" v-for="person in bsc">
-                    <div class="member" data-aos="fade-up" data-aos-delay="3">
-                        <div class="member-img">
-                            <!--                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">-->
-                            <img :src="person.photo" class="img-fluid " alt="">
-                            <div class="social">
-                                <a :href="person.google_scholar"><img
-                                        src="assets/img/icons8-google-scholar-24.png"></img></a>
-                                <a :href="person.twitter"><i class="bi bi-twitter"></i></a>
-                                <a :href="'mailto:'+person.email"><i class="bi bi-google"></i></a>
-                                <a :href="person.linkedin"><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>{{person.name}} {{person.surname}}</h4>
-                            <span>{{person.position}}</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-    </section><!-- End Team Section -->
     <section id="faq" class="faq">
         <div class="container">
             <div class="section-title">
-                <h2>Alumnies</h2>
+                <h2>Alumni</h2>
             </div>
             <div class="row faq-item d-flex align-items-stretch mx-auto " data-aos="fade-up" data-aos-delay="1"
-                 v-for="person in alumnies">
+                 v-for="person in alumni">
                 <div class="col-lg-2">
                     <!--                    <i class="ri-question-line"></i>-->
                     {{person.graduation_year}}
@@ -293,143 +257,164 @@
 
 </body>
 <script type="module">
-
+/*
+    import json from "./data/team.json" assert { type: "json" };
+   
     window.app = new Vue({
         el: '#main',
         data: {
-
-            "staff": [
-
-
-                {
-                    "name": "Olga",
-                    "surname": "Martsenyuk",
-                    "position": "PhD, Scientific Researcher",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "o.p.martsenyuk@imbg.org.ua",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "experimental molecular biology"
-                },
-
-                {
-                    "name": "Ruslan",
-                    "surname": "Rodriguez",
-                    "position": "Junior Scientific Researcher",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "m.obolenska@gmail.com",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "proteomics, metabolic pathways modelling"
-                },
-                {
-                    "name": "Maria",
-                    "surname": "Obolenska",
-                    "position": "Professor, Dr. Sci., Lab Head",
-                    "photo": "assets/img/team/team-1.jpg",
-                    "twitter": "",
-                    "email": "m.obolenska@gmail.com",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "computational and molecular biology"
-
-                },
-                {
-                    "name": "Alina",
-                    "surname": "Frolova",
-                    "position": "Junior Scientific Researcher",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "a.o.frolova@imbg.org.ua",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "computational biology and bioinformatics"
-
-                },
-                {
-                    "name": "Maria",
-                    "surname": "Chabanova",
-                    "position": "Technician",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "lab equipment"
-
-                }
-            ],
-            "phd": [
-                {
-                    "name": "Olexandr",
-                    "surname": "Lykhenko",
-                    "position": "MSc",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "lykhenko.olexandr@gmail.com",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "applied math and bioinformatics"
-                },
-
-                {
-                    "name": "Serhiy",
-                    "surname": "Ralchenko",
-                    "position": "MSc",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "ralchenkos@gmail.com",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "experimental molecular biology"
-                }
-            ],
-            "bsc": [
-                {
-                    "name": "Stanislav",
-                    "surname": "Zubenko",
-                    "position": "UnderGrad",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "dantistnfs@gmail.com",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "molecular biology, data-mining"
-                },
-
-                {
-                    "name": "Vladyslav",
-                    "surname": "Bondarenko",
-                    "position": "BSc",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "vladyslav.bon@gmail.com",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "computational biology and bioinformatics"
-                }
-            ],
-            "alumnies": [
-                {
-                    "name": "Name",
-                    "surname": "Surname",
-                    "position": "UnderGrad",
-                    "photo": "assets/img/team/team-3.jpg",
-                    "twitter": "",
-                    "email": "dantistnfs@gmail.com",
-                    "linkedin": "",
-                    "google_scholar": "",
-                    "profile": "molecular biology, data-mining",
-                    "graduation_year": 2020,
-                    "description": "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non\n" +
-                        "                        curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non."
-                }
-            ],
-
-
+                staff: json.staff,
+                stu: json.stu,
+                alumni: json.alumni
+              }
+    }) 
+*/
+    window.app = new Vue({
+        el: '#main',
+        data: {
+    "staff": [
+        {
+            "name": "Olga",
+            "surname": "Martsenyuk",
+            "position": "Senior Researcher",
+            "photo": "assets/img/team/team-3.jpg",
+            "twitter": "",
+            "email": "o.p.martsenyuk@imbg.org.ua",
+            "linkedin": "",
+            "google_scholar": "",
+            "profile": "experimental molecular biology"
+        },
+        {
+            "name": "Oleksandr",
+            "surname": "Lykhenko",
+            "position": "Junior Research Fellow",
+            "photo": "assets/img/team/team-3.jpg",
+            "twitter": "",
+            "email": "lykhenko.olexandr@gmail.com",
+            "linkedin": "",
+            "google_scholar": "",
+            "profile": "proteomics, metabolic pathways modelling"
+        },
+        {
+            "name": "Maria",
+            "surname": "Obolenska",
+            "position": "Professor, Dr. Sci., Group Leader",
+            "photo": "assets/img/team/team-1.jpg",
+            "twitter": "",
+            "email": "m.obolenska@gmail.com",
+            "linkedin": "",
+            "google_scholar": "",
+            "profile": "computational and molecular biology"
+        },
+        {
+            "name": "Alina",
+            "surname": "Frolova",
+            "position": "Junior Research Fellow",
+            "photo": "assets/img/team/aln.png",
+            "twitter": "",
+            "email": "a.o.frolova@imbg.org.ua",
+            "linkedin": "",
+            "google_scholar": "",
+            "profile": "computational biology and bioinformatics"
+        },
+        {
+            "name": "Maria",
+            "surname": "Chabanova",
+            "position": "Technician",
+            "photo": "assets/img/team/team-3.jpg",
+            "twitter": "",
+            "email": "",
+            "linkedin": "",
+            "google_scholar": "",
+            "profile": "lab equipment"
         }
+      ],
+      "stu": [
+          {
+              "name": "Stanislav",
+              "surname": "Zubenko",
+              "position": "PhD student",
+              "photo": "assets/img/team/team-3.jpg",
+              "twitter": "",
+              "email": "dantistnfs@gmail.com",
+              "linkedin": "",
+              "google_scholar": "",
+              "profile": "molecular biology, data-mining"
+          },
+          {
+              "name": "Yura",
+              "surname": "Ryzhuk",
+              "position": "Master's student",
+              "photo": "assets/img/team/team-3.jpg",
+              "twitter": "",
+              "email": "",
+              "linkedin": "",
+              "google_scholar": "",
+              "profile": "molecular biology, data-mining"
+          },
+          {
+              "name": "Dmytro",
+              "surname": "Goryslavets",
+              "position": "Master's student",
+              "photo": "assets/img/team/team-3.jpg",
+              "twitter": "",
+              "email": "",
+              "linkedin": "",
+              "google_scholar": "",
+              "profile": "computational biology and bioinformatics"
+          },
+          {
+             "name": "Anna",
+             "surname": "Manko",
+             "position": "Master's student",
+             "photo": "assets/img/team/team-3.jpg",
+             "twitter": "",
+             "email": "",
+             "linkedin": "",
+             "google_scholar": "",
+             "profile": "computational biology and bioinformatics"
+          },
+          {
+             "name": "Artem",
+             "surname": "Kicedzhi",
+             "position": "Bachelor's student",
+             "photo": "assets/img/team/team-3.jpg",
+             "twitter": "",
+             "email": "",
+             "linkedin": "",
+             "google_scholar": "",
+             "profile": "molecular biology"
+          }          
+      ],
+      "alumni": [
+          {
+               "name": "Ruslan",
+               "surname": "Rodriguez",
+               "position": "",
+               "photo": "assets/img/team/team-3.jpg",
+               "twitter": "",
+               "email": "",
+               "linkedin": "",
+               "google_scholar": "",
+               "profile": "molecular biology, data-mining",
+               "graduation_year": 2021,
+               "description": "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non"
+          },
+          {
+               "name": "Bogdan",
+               "surname": "Tokovenko",
+               "position": "",
+               "photo": "assets/img/team/team-3.jpg",
+               "twitter": "",
+               "email": "",
+               "linkedin": "",
+               "google_scholar": "",
+               "profile": "molecular biology, data-mining",
+               "graduation_year": 2017,
+               "description": "Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non"
+          }
+      ]
+    }
     })
 </script>
 
