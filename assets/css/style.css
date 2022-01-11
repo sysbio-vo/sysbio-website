@@ -1223,7 +1223,7 @@ section {
 .team .member .member-info h4 {
     font-weight: 700;
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 17px;
     color: #222222;
 }
 
@@ -1748,4 +1748,10 @@ section {
 .cta .cta-btn:hover {
     background: #fff;
     color: #6c63ff;
+}
+
+.inline-position {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
 }
